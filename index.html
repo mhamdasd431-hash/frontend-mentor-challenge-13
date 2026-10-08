@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+  <main class="todo-app">
+    <header class="header">
+      <h1>TODO</h1>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <img src="images/icon-moon.svg" alt="Theme Icon" id="theme-icon">
+      </button>
+    </header>
+
+    <div class="todo-input-container">
+      <span class="circle-border"></span>
+      <input type="text" id="todo-input" placeholder="Create a new todo..." autocomplete="off">
+    </div>
+    <div class="todo-box">
+      <ul id="todo-list">
+        <li class="todo-item completed" draggable="true">
+          <label class="todo-checkbox-label">
+            <input type="checkbox" checked>
+            <span class="checkmark">
+              <img src="images/icon-check.svg" alt="Check">
+            </span>
+            <span class="todo-text">Complete online JavaScript course</span>
+          </label>
+          <button class="delete-btn">
+            <img src="images/icon-cross.svg" alt="Delete">
+          </button>
+        </li>
+      </ul>
+      <div class="todo-footer">
+        <span id="items-count">5 items left</span>
+        
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div>
+    <p class="drag-drop-info">Drag and drop to reorder list</p>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamad</a>.
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
